@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: friendnix
+    env: node
+    buildCommand: NODE_ENV=development npm install && cd frontend && NODE_ENV=development npm install && npm run build
+    startCommand: node --max-http-header-size=32768 backend/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false   # Option A: paste your MongoDB Atlas connection string here
+      # Option B: Add a Render PostgreSQL database and it will auto-set DATABASE_URL

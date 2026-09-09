@@ -1,0 +1,37 @@
+{
+  "name": "Friendnix",
+  "short_name": "Friendnix",
+  "description": "Chat, call, and connect with friends on Friendnix",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/Logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["social", "communication"],
+  "shortcuts": [
+    {
+      "name": "Chats",
+      "url": "/chats",
+      "description": "Open your chats"
+    },
+    {
+      "name": "Contacts",
+      "url": "/contacts",
+      "description": "View your contacts"
+    }
+  ]
+}

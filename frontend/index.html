@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="google-site-verification" content="n9q_xr7erSzpQubFLl1YRH4sos4DjVVpxN7aFe-Qsv4" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>Friendnix</title>
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="/Logo.png" />
+    <!-- Apply saved theme BEFORE React loads to prevent purple flash -->
+    <script>
+      (function(){
+        var t=localStorage.getItem('fc_theme')||'violet';
+        document.documentElement.dataset.theme=t;
+      })();
+    </script>
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <!-- iOS PWA support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Friendnix" />
+    <link rel="apple-touch-icon" href="/Logo.png" />
+    <!-- Windows tile -->
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <meta name="msapplication-TileImage" content="/Logo.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

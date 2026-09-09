@@ -1,0 +1,673 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== THEME VARIABLES ===== */
+:root,
+[data-theme="violet"] {
+  --fc-header: linear-gradient(to right, #1d4ed8, #2563eb);
+  --fc-welcome: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #0ea5e9 100%);
+  --fc-bubble: linear-gradient(135deg, #3b82f6, #2563eb);
+  --fc-btn: linear-gradient(to right, #3b82f6, #2563eb);
+  --fc-fab: linear-gradient(135deg, #3b82f6, #2563eb);
+  --fc-light: #eff6ff;
+  --fc-light2: #dbeafe;
+  --fc-accent: #2563eb;
+  --fc-accent-light: #93c5fd;
+  --fc-glow: rgba(37, 99, 235, 0.15);
+  --fc-shadow: rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="ocean"] {
+  --fc-header: linear-gradient(to right, #2563eb, #0891b2);
+  --fc-welcome: linear-gradient(135deg, #2563eb 0%, #0891b2 50%, #0d9488 100%);
+  --fc-bubble: linear-gradient(135deg, #3b82f6, #0891b2);
+  --fc-btn: linear-gradient(to right, #3b82f6, #0891b2);
+  --fc-fab: linear-gradient(135deg, #3b82f6, #0891b2);
+  --fc-light: #eff6ff;
+  --fc-light2: #dbeafe;
+  --fc-accent: #2563eb;
+  --fc-accent-light: #93c5fd;
+  --fc-glow: rgba(37, 99, 235, 0.15);
+  --fc-shadow: rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="sunset"] {
+  --fc-header: linear-gradient(to right, #ea580c, #e11d48);
+  --fc-welcome: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #e11d48 100%);
+  --fc-bubble: linear-gradient(135deg, #f97316, #ea580c);
+  --fc-btn: linear-gradient(to right, #f97316, #ea580c);
+  --fc-fab: linear-gradient(135deg, #f97316, #ea580c);
+  --fc-light: #fff7ed;
+  --fc-light2: #ffedd5;
+  --fc-accent: #ea580c;
+  --fc-accent-light: #fdba74;
+  --fc-glow: rgba(234, 88, 12, 0.15);
+  --fc-shadow: rgba(249, 115, 22, 0.3);
+}
+
+[data-theme="forest"] {
+  --fc-header: linear-gradient(to right, #059669, #0d9488);
+  --fc-welcome: linear-gradient(135deg, #059669 0%, #0d9488 50%, #0891b2 100%);
+  --fc-bubble: linear-gradient(135deg, #10b981, #059669);
+  --fc-btn: linear-gradient(to right, #10b981, #059669);
+  --fc-fab: linear-gradient(135deg, #10b981, #059669);
+  --fc-light: #f0fdf4;
+  --fc-light2: #dcfce7;
+  --fc-accent: #059669;
+  --fc-accent-light: #6ee7b7;
+  --fc-glow: rgba(5, 150, 105, 0.15);
+  --fc-shadow: rgba(16, 185, 129, 0.3);
+}
+
+[data-theme="candy"] {
+  --fc-header: linear-gradient(to right, #ec4899, #a855f7);
+  --fc-welcome: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #a855f7 100%);
+  --fc-bubble: linear-gradient(135deg, #f472b6, #ec4899);
+  --fc-btn: linear-gradient(to right, #f472b6, #ec4899);
+  --fc-fab: linear-gradient(135deg, #f472b6, #ec4899);
+  --fc-light: #fdf2f8;
+  --fc-light2: #fce7f3;
+  --fc-accent: #ec4899;
+  --fc-accent-light: #f9a8d4;
+  --fc-glow: rgba(236, 72, 153, 0.15);
+}
+
+[data-theme="dark"] {
+  --fc-header: linear-gradient(to right, #0f172a, #1e293b);
+  --fc-welcome: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  --fc-bubble: linear-gradient(135deg, #6366f1, #4f46e5);
+  --fc-btn: linear-gradient(to right, #6366f1, #4f46e5);
+  --fc-fab: linear-gradient(135deg, #6366f1, #4f46e5);
+  --fc-light: #0f172a;
+  --fc-light2: #1e293b;
+  --fc-accent: #818cf8;
+  --fc-accent-light: #c7d2fe;
+  --fc-glow: rgba(129, 140, 248, 0.2);
+  --fc-shadow: rgba(15, 23, 42, 0.7);
+  color-scheme: dark;
+}
+
+/* ===== DARK THEME CARD OVERRIDES ===== */
+[data-theme="dark"] .bg-white {
+  background-color: #1e293b !important;
+}
+[data-theme="dark"] .text-gray-800 {
+  color: #f1f5f9 !important;
+}
+[data-theme="dark"] .text-gray-700 {
+  color: #e2e8f0 !important;
+}
+[data-theme="dark"] .text-gray-600 {
+  color: #94a3b8 !important;
+}
+[data-theme="dark"] .text-gray-500 {
+  color: #94a3b8 !important;
+}
+[data-theme="dark"] .text-gray-400 {
+  color: #64748b !important;
+}
+[data-theme="dark"] .text-gray-300 {
+  color: #475569 !important;
+}
+[data-theme="dark"] .border-gray-100,
+[data-theme="dark"] .border-gray-200 {
+  border-color: #334155 !important;
+}
+[data-theme="dark"] .bg-gray-50 {
+  background-color: #1e293b !important;
+}
+[data-theme="dark"] .bg-gray-100 {
+  background-color: #334155 !important;
+}
+[data-theme="dark"] .shadow-sm,
+[data-theme="dark"] .shadow-md,
+[data-theme="dark"] .shadow-lg {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5) !important;
+}
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #475569 !important;
+}
+
+/* ===== GALAXY THEME — Animated Milky Way ===== */
+
+@keyframes galaxy-stars-drift {
+  from {
+    background-position:
+      0 0, 0 0,
+      12px 20px,
+      58px 86px,
+      16px 48px,
+      34px 12px,
+      6px 38px;
+  }
+  to {
+    background-position:
+      0 0, 0 0,
+      232px 240px,
+      208px 236px,
+      111px 143px,
+      92px 68px,
+      41px 74px;
+  }
+}
+
+[data-theme="galaxy"] {
+  --fc-header: linear-gradient(135deg, #06050f 0%, #0b0a1c 100%);
+  --fc-welcome: linear-gradient(135deg, #04030b 0%, #08071a 50%, #04030b 100%);
+  --fc-bubble: linear-gradient(135deg, #17204e 0%, #1c2a62 100%);
+  --fc-btn: linear-gradient(to right, #2d2b8a, #3730a3);
+  --fc-fab: linear-gradient(135deg, #3730a3 0%, #4338ca 100%);
+  --fc-light: transparent;
+  --fc-light2: rgba(8, 7, 18, 0.72);
+  --fc-accent: #7c9eff;
+  --fc-accent-light: #a5b8ff;
+  --fc-glow: rgba(99, 120, 255, 0.15);
+  --fc-shadow: rgba(15, 14, 45, 0.85);
+  color-scheme: dark;
+}
+
+/* ── Animated starfield + Milky Way band on body ── */
+[data-theme="galaxy"] body {
+  background-color: #050409;
+  background-image:
+    /* Milky Way main arm — faint diagonal glow band */
+    linear-gradient(118deg,
+      transparent 0%,  transparent 14%,
+      rgba(148,172,255,0.018) 25%,
+      rgba(185,205,255,0.046) 35%,
+      rgba(205,222,255,0.056) 43%,
+      rgba(188,208,255,0.040) 51%,
+      rgba(152,175,255,0.020) 60%,
+      transparent 70%, transparent 100%
+    ),
+    /* Milky Way second faint outer arm */
+    linear-gradient(118deg,
+      transparent 0%, transparent 54%,
+      rgba(135,158,255,0.012) 61%,
+      rgba(162,186,255,0.026) 68%,
+      rgba(142,164,255,0.014) 75%,
+      transparent 83%, transparent 100%
+    ),
+    /* Bright foreground stars */
+    radial-gradient(circle, rgba(255,255,255,0.92) 0.6px, transparent 0.6px),
+    /* Blue-white mid stars */
+    radial-gradient(circle, rgba(210,228,255,0.76) 0.5px, transparent 0.5px),
+    /* Medium stars */
+    radial-gradient(circle, rgba(255,255,255,0.58) 0.4px, transparent 0.4px),
+    /* Small stars */
+    radial-gradient(circle, rgba(200,220,255,0.44) 0.3px, transparent 0.3px),
+    /* Micro-stars */
+    radial-gradient(circle, rgba(255,255,255,0.28) 0.3px, transparent 0.3px);
+  background-size:
+    100% 100%,
+    100% 100%,
+    220px 220px,
+    150px 150px,
+    94px 94px,
+    57px 57px,
+    35px 35px;
+  background-position:
+    0 0, 0 0,
+    12px 20px,
+    58px 86px,
+    16px 48px,
+    34px 12px,
+    6px 38px;
+  animation: galaxy-stars-drift 100s linear infinite;
+}
+
+/* ── Surfaces ── */
+[data-theme="galaxy"] .bg-white {
+  background: linear-gradient(160deg, #0c0b16 0%, #0f0e1e 100%) !important;
+}
+[data-theme="galaxy"] .bg-gray-50 {
+  background-color: #0a0914 !important;
+}
+[data-theme="galaxy"] .bg-gray-100 {
+  background-color: #0f0e1c !important;
+}
+[data-theme="galaxy"] .bg-gray-200 {
+  background-color: #141228 !important;
+}
+
+/* ── Hover states ── */
+[data-theme="galaxy"] .hover\:bg-gray-50:hover  { background-color: #0f0e1c !important; }
+[data-theme="galaxy"] .hover\:bg-gray-100:hover { background-color: #141228 !important; }
+[data-theme="galaxy"] .hover\:bg-gray-200:hover { background-color: #1a1834 !important; }
+[data-theme="galaxy"] .hover\:bg-white:hover    { background-color: #0f0e1c !important; }
+[data-theme="galaxy"] .hover\:bg-red-50:hover   { background-color: #160a12 !important; }
+
+/* ── Text ── */
+[data-theme="galaxy"] .text-gray-900 { color: #eaecff !important; }
+[data-theme="galaxy"] .text-gray-800 { color: #d4d8f5 !important; }
+[data-theme="galaxy"] .text-gray-700 { color: #a8aed8 !important; }
+[data-theme="galaxy"] .text-gray-600 { color: #7880b0 !important; }
+[data-theme="galaxy"] .text-gray-500 { color: #585e8a !important; }
+[data-theme="galaxy"] .text-gray-400 { color: #3e4268 !important; }
+[data-theme="galaxy"] .text-gray-300 { color: #282c50 !important; }
+
+/* ── Borders ── */
+[data-theme="galaxy"] .border-gray-100,
+[data-theme="galaxy"] .border-gray-200 { border-color: #181630 !important; }
+[data-theme="galaxy"] .border-gray-300  { border-color: #1e1c40 !important; }
+[data-theme="galaxy"] .border-white     { border-color: #050409 !important; }
+
+/* ── Shadows — subtle deep navy ── */
+[data-theme="galaxy"] .shadow-sm,
+[data-theme="galaxy"] .shadow-md,
+[data-theme="galaxy"] .shadow-lg,
+[data-theme="galaxy"] .shadow-xl {
+  box-shadow: 0 2px 18px rgba(10, 8, 40, 0.80), 0 1px 5px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* ── Inputs ── */
+[data-theme="galaxy"] input,
+[data-theme="galaxy"] textarea {
+  background-color: #090816 !important;
+  color: #eaecff !important;
+  border-color: #1c1a36 !important;
+}
+[data-theme="galaxy"] input::placeholder,
+[data-theme="galaxy"] textarea::placeholder { color: #3e4268 !important; }
+
+/* ── Select elements ── */
+[data-theme="galaxy"] select {
+  background-color: #0c0b16 !important;
+  color: #eaecff !important;
+  border-color: #1c1a36 !important;
+}
+
+[data-theme="midnight"] {
+
+  --fc-header: linear-gradient(to right, #181824, #232336);
+  --fc-welcome: linear-gradient(135deg, #181824 0%, #232336 50%, #23272f 100%);
+  --fc-bubble: linear-gradient(135deg, #232336, #181824);
+  --fc-btn: linear-gradient(to right, #232336, #181824);
+  --fc-fab: linear-gradient(135deg, #232336, #181824);
+  --fc-light: #181824;
+  --fc-light2: #232336;
+  --fc-accent: #8b5cf6;
+  --fc-accent-light: #6366f1;
+  --fc-glow: rgba(139, 92, 246, 0.18);
+  --fc-shadow: rgba(24, 24, 36, 0.7);
+}
+[data-theme="rosegold"] {
+  --fc-header: linear-gradient(to right, #be185d, #db2777);
+  --fc-welcome: linear-gradient(135deg, #fda4af 0%, #fb7185 50%, #f43f5e 100%);
+  --fc-bubble: linear-gradient(135deg, #fb7185, #f43f5e);
+  --fc-btn: linear-gradient(to right, #fb7185, #f43f5e);
+  --fc-fab: linear-gradient(135deg, #fb7185, #f43f5e);
+  --fc-light: #fff1f2;
+  --fc-light2: #ffe4e6;
+  --fc-accent: #e11d48;
+  --fc-accent-light: #fda4af;
+  --fc-glow: rgba(225, 29, 72, 0.15);
+  --fc-shadow: rgba(251, 113, 133, 0.3);
+}
+
+[data-theme="neon"] {
+  --fc-header: linear-gradient(to right, #0e7490, #7c3aed);
+  --fc-welcome: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #ec4899 100%);
+  --fc-bubble: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  --fc-btn: linear-gradient(to right, #06b6d4, #8b5cf6);
+  --fc-fab: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  --fc-light: #0a0a1a;
+  --fc-light2: #1a1a2e;
+  --fc-accent: #06b6d4;
+  --fc-accent-light: #67e8f9;
+  --fc-glow: rgba(6, 182, 212, 0.2);
+  --fc-shadow: rgba(6, 182, 212, 0.4);
+}
+
+[data-theme="arctic"] {
+  --fc-header: linear-gradient(to right, #0369a1, #0891b2);
+  --fc-welcome: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 40%, #38bdf8 100%);
+  --fc-bubble: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  --fc-btn: linear-gradient(to right, #38bdf8, #0ea5e9);
+  --fc-fab: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  --fc-light: #f0f9ff;
+  --fc-light2: #e0f2fe;
+  --fc-accent: #0284c7;
+  --fc-accent-light: #7dd3fc;
+  --fc-glow: rgba(2, 132, 199, 0.15);
+  --fc-shadow: rgba(56, 189, 248, 0.3);
+}
+
+[data-theme="cherry"] {
+  --fc-header: linear-gradient(to right, #d946ef, #f472b6);
+  --fc-welcome: linear-gradient(135deg, #fce7f3 0%, #f9a8d4 50%, #f472b6 100%);
+  --fc-bubble: linear-gradient(135deg, #f9a8d4, #e879f9);
+  --fc-btn: linear-gradient(to right, #d946ef, #f472b6);
+  --fc-fab: linear-gradient(135deg, #d946ef, #f472b6);
+  --fc-light: #fdf4ff;
+  --fc-light2: #fae8ff;
+  --fc-accent: #c026d3;
+  --fc-accent-light: #f0abfc;
+  --fc-glow: rgba(192, 38, 211, 0.15);
+  --fc-shadow: rgba(244, 114, 182, 0.3);
+}
+
+[data-theme="deep_ocean"] {
+  --fc-header: linear-gradient(to right, #1e3a5f, #0c4a6e);
+  --fc-welcome: linear-gradient(135deg, #0f2942 0%, #1e3a5f 50%, #0c4a6e 100%);
+  --fc-bubble: linear-gradient(135deg, #1e3a5f, #0891b2);
+  --fc-btn: linear-gradient(to right, #1e3a5f, #0c4a6e);
+  --fc-fab: linear-gradient(135deg, #1e3a5f, #0c4a6e);
+  --fc-light: #eff6ff;
+  --fc-light2: #dbeafe;
+  --fc-accent: #1d4ed8;
+  --fc-accent-light: #93c5fd;
+  --fc-glow: rgba(29, 78, 216, 0.15);
+  --fc-shadow: rgba(30, 58, 95, 0.4);
+}
+
+[data-theme="lava"] {
+  --fc-header: linear-gradient(to right, #991b1b, #c2410c);
+  --fc-welcome: linear-gradient(135deg, #450a0a 0%, #991b1b 50%, #ea580c 100%);
+  --fc-bubble: linear-gradient(135deg, #dc2626, #ea580c);
+  --fc-btn: linear-gradient(to right, #991b1b, #c2410c);
+  --fc-fab: linear-gradient(135deg, #991b1b, #c2410c);
+  --fc-light: #fff7ed;
+  --fc-light2: #ffedd5;
+  --fc-accent: #b91c1c;
+  --fc-accent-light: #fca5a5;
+  --fc-glow: rgba(185, 28, 28, 0.2);
+  --fc-shadow: rgba(153, 27, 27, 0.5);
+}
+
+/* ===== AMOLED DARK — True Black OLED ===== */
+[data-theme="amoled"] {
+  --fc-header: linear-gradient(to right, #000000, #06060e);
+  --fc-welcome: linear-gradient(135deg, #000000 0%, #05050d 50%, #08081a 100%);
+  --fc-bubble: linear-gradient(135deg, #14203a, #182844);
+  --fc-btn: linear-gradient(to right, #14203a, #182844);
+  --fc-fab: linear-gradient(135deg, #14203a, #182844);
+  --fc-light: #000000;
+  --fc-light2: #0a0a14;
+  --fc-accent: #5b9bd5;
+  --fc-accent-light: #88bde8;
+  --fc-glow: rgba(91, 155, 213, 0.1);
+  --fc-shadow: rgba(0, 0, 0, 0.95);
+  /* Semantic tokens used by JS inline styles */
+  --fc-text-body: #d0d0e0;
+  --fc-border: #181824;
+  color-scheme: dark;
+}
+
+/* ── Surfaces ── */
+[data-theme="amoled"] .bg-white {
+  background-color: #0c0c18 !important;
+}
+[data-theme="amoled"] .bg-gray-50 {
+  background-color: #0c0c18 !important;
+}
+[data-theme="amoled"] .bg-gray-100 {
+  background-color: #141420 !important;
+}
+[data-theme="amoled"] .bg-gray-200 {
+  background-color: #1a1a28 !important;
+}
+[data-theme="amoled"] .bg-gray-300 {
+  background-color: #20202e !important;
+}
+
+/* ── Hover states ── */
+[data-theme="amoled"] .hover\:bg-gray-50:hover {
+  background-color: #141420 !important;
+}
+[data-theme="amoled"] .hover\:bg-gray-100:hover {
+  background-color: #1a1a28 !important;
+}
+[data-theme="amoled"] .hover\:bg-gray-200:hover {
+  background-color: #20202e !important;
+}
+[data-theme="amoled"] .hover\:bg-white:hover {
+  background-color: #141420 !important;
+}
+[data-theme="amoled"] .hover\:bg-red-50:hover {
+  background-color: #1c0a0a !important;
+}
+
+/* ── Text ── */
+[data-theme="amoled"] .text-gray-900 {
+  color: #e8e8f2 !important;
+}
+[data-theme="amoled"] .text-gray-800 {
+  color: #d8d8ea !important;
+}
+[data-theme="amoled"] .text-gray-700 {
+  color: #b0b0c8 !important;
+}
+[data-theme="amoled"] .text-gray-600 {
+  color: #787890 !important;
+}
+[data-theme="amoled"] .text-gray-500 {
+  color: #5a5a70 !important;
+}
+[data-theme="amoled"] .text-gray-400 {
+  color: #404055 !important;
+}
+[data-theme="amoled"] .text-gray-300 {
+  color: #2c2c3e !important;
+}
+
+/* ── Borders ── */
+[data-theme="amoled"] .border-gray-100,
+[data-theme="amoled"] .border-gray-200 {
+  border-color: #181824 !important;
+}
+[data-theme="amoled"] .border-gray-300 {
+  border-color: #1e1e2c !important;
+}
+/* Status-dot ring uses border-white — make it match the page background */
+[data-theme="amoled"] .border-white {
+  border-color: #000000 !important;
+}
+
+/* ── Shadows ── */
+[data-theme="amoled"] .shadow-sm,
+[data-theme="amoled"] .shadow-md,
+[data-theme="amoled"] .shadow-lg,
+[data-theme="amoled"] .shadow-xl {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* ── Inputs ── */
+[data-theme="amoled"] input,
+[data-theme="amoled"] textarea {
+  background-color: #06060e !important;
+  color: #d0d0e0 !important;
+  border-color: #181824 !important;
+}
+[data-theme="amoled"] input::placeholder,
+[data-theme="amoled"] textarea::placeholder {
+  color: #363650 !important;
+}
+
+/* ── select elements ── */
+[data-theme="amoled"] select {
+  background-color: #0c0c18 !important;
+  color: #d0d0e0 !important;
+  border-color: #181824 !important;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Nunito', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--fc-light);
+  overscroll-behavior: none;
+}
+
+#root {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.22); }
+
+/* Safe area for notched/home-indicator devices */
+.safe-area-bottom {
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* Themed input borders */
+.fc-input {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--fc-light2);
+  transition: border-color 0.15s ease;
+}
+.fc-input:focus {
+  border-color: var(--fc-accent);
+}
+
+/* Smooth scroll for messages */
+.messages-container {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: contain;
+}
+
+/* Input styles */
+input, textarea {
+  outline: none;
+}
+
+/* Prevent zoom on input focus on iOS */
+input[type="text"],
+input[type="password"],
+textarea {
+  font-size: 16px;
+}
+
+/* Modern card hover effect */
+.fc-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.fc-card:active {
+  transform: scale(0.98);
+}
+
+/* Reaction pill pop-in animation */
+@keyframes reaction-pop {
+  0%   { transform: scale(0) rotate(-10deg); opacity: 0; }
+  70%  { transform: scale(1.15) rotate(4deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.reaction-pill-enter {
+  animation: reaction-pop 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Smooth message bubble entrance */
+.msg-bubble {
+  transition: box-shadow 0.15s ease;
+}
+
+/* Animated online pulse */
+@keyframes online-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.2); }
+}
+.online-pulse {
+  animation: online-pulse 2s ease-in-out infinite;
+}
+
+/* ===== LEO TESTER BADGE ===== */
+@keyframes tester-glow {
+  0%, 100% {
+    box-shadow: 0 0 6px 2px #a855f7, 0 0 12px 4px #ec4899, 0 0 20px 6px #3b82f6;
+    border-color: #a855f7;
+  }
+  33% {
+    box-shadow: 0 0 6px 2px #3b82f6, 0 0 12px 4px #a855f7, 0 0 20px 6px #ec4899;
+    border-color: #3b82f6;
+  }
+  66% {
+    box-shadow: 0 0 6px 2px #ec4899, 0 0 12px 4px #3b82f6, 0 0 20px 6px #a855f7;
+    border-color: #ec4899;
+  }
+}
+
+@keyframes tester-text-glow {
+  0%, 100% { text-shadow: 0 0 6px #a855f7, 0 0 10px #ec4899; }
+  33%       { text-shadow: 0 0 6px #3b82f6, 0 0 10px #a855f7; }
+  66%       { text-shadow: 0 0 6px #ec4899, 0 0 10px #3b82f6; }
+}
+
+.tester-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1.5px solid #a855f7;
+  background: linear-gradient(135deg, #1e0533 0%, #0f172a 100%);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #e9d5ff;
+  animation: tester-glow 2s ease-in-out infinite;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.tester-badge span {
+  animation: tester-text-glow 2s ease-in-out infinite;
+}
+
+/* ===== OFFICIAL BADGE (FriendNix) ===== */
+@keyframes official-glow {
+  0%, 100% {
+    box-shadow: 0 0 6px 2px #f59e0b, 0 0 12px 4px #d97706, 0 0 20px 6px #fbbf24;
+    border-color: #f59e0b;
+  }
+  50% {
+    box-shadow: 0 0 8px 3px #fbbf24, 0 0 16px 6px #f59e0b, 0 0 24px 8px #d97706;
+    border-color: #fbbf24;
+  }
+}
+
+@keyframes official-text-glow {
+  0%, 100% { text-shadow: 0 0 6px #f59e0b, 0 0 10px #d97706; }
+  50%       { text-shadow: 0 0 8px #fbbf24, 0 0 14px #f59e0b; }
+}
+
+.official-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1.5px solid #f59e0b;
+  background: linear-gradient(135deg, #1a0e00 0%, #0f172a 100%);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #fde68a;
+  animation: official-glow 2s ease-in-out infinite;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.official-badge span {
+  animation: official-text-glow 2s ease-in-out infinite;
+}

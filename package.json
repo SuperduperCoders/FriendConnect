@@ -1,0 +1,24 @@
+{
+  "name": "friendnix",
+  "version": "1.0.0",
+  "description": "Friendnix",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install",
+    "start": "node --max-http-header-size=32768 backend/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.21.0",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "packageManager": "npm@10.2.4"
+}

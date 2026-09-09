@@ -1,0 +1,7 @@
+node_modules/
+frontend/dist/
+.env
+*.env
+# Database file — contains real user data and purchase history.
+# Never let git overwrite it; JWT restoration handles fresh-clone scenarios.
+backend/data/db.json

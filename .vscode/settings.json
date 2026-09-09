@@ -1,0 +1,12 @@
+{
+  "typescript.tsdk": "frontend/node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true
+  },
+  "eslint.workingDirectories": ["frontend"],
+  "typescript.preferences.includePackageJsonAutoImports": "off"
+}
